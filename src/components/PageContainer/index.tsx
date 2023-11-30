@@ -25,6 +25,7 @@ const BackgroundImageYellow = styled.img`
 
 const Container = styled.div`
 	width: 70%;
+	max-width: 1440px;
 	margin: 0 auto;
 `;
 
