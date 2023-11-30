@@ -1,13 +1,6 @@
 import logo from "/logo.svg";
 import Navbar from "../Navbar";
-import styled from "styled-components";
-
-const MenuStyled = styled.header`
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding-top: 1rem;
-`;
+import { MenuStyled } from "./styled";
 
 function Menu() {
 	return (

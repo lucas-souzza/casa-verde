@@ -1,12 +1,5 @@
-import styled from "styled-components";
 import LinkItem from "../LinkItem";
-
-const NavStyled = styled.nav`
-	& > ul {
-		display: flex;
-		gap: 1rem;
-	}
-`;
+import { NavStyled } from "./styled";
 
 function Navbar() {
 	return (

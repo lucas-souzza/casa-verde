@@ -1,23 +1,6 @@
 import { Link } from "react-router-dom";
-import { ReactElement } from "react";
-import styled from "styled-components";
-
-interface NavLinkProps {
-	children: ReactElement | string;
-	path: string;
-}
-
-const ListItem = styled.li`
-	& > * {
-		color: var(--font-color);
-		text-decoration: none;
-		font-weight: 600;
-	}
-
-	& > *:hover {
-		text-decoration: underline 1px var(--font-color);
-	}
-`;
+import { NavLinkProps } from "./types";
+import { ListItem } from "./styled";
 
 function LinkItem({ children, path }: NavLinkProps) {
 	return (
