@@ -1,7 +1,16 @@
+import PageContainer from "../../components/PageContainer";
+import Menu from "../../components/Menu";
+import SubscribeNewsLetter from "../../components/SubscribeNewsLetter";
+
 function Home() {
 	return (
 		<>
-			<h1>Home</h1>
+			<PageContainer>
+				<main>
+					<Menu />
+					<SubscribeNewsLetter />
+				</main>
+			</PageContainer>
 		</>
 	);
 }

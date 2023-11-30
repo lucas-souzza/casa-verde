@@ -1,5 +1,13 @@
 :root {
-	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-	line-height: 1.5;
-	font-weight: 400;
+	--font-title: "Elsie Swash Caps", serif;
+	--font-default: "Montserrat", sans-serif;
+	--font-color: #202020;
+}
+
+body,
+html,
+#root {
+	min-width: 100vw;
+	min-height: 100vh;
+	font-family: var(--font-default);
 }
