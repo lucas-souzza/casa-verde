@@ -16,7 +16,7 @@ function ConfirmSubscribeModal({
 				</p>
 				<p>{email}</p>
 				<form method="dialog">
-					<ButtonDefault type="button" handleClick={changeModalState}>
+					<ButtonDefault type="button" handleClick={changeModalState} bgColor="#ffcb47">
 						Fechar
 					</ButtonDefault>
 				</form>

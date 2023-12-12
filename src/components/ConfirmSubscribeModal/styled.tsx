@@ -4,13 +4,13 @@ import { ModalStyledProps } from "./types";
 export const ModalContainer = styled.dialog<Pick<ModalStyledProps, "$isOpen">>`
 	border: none;
 	margin: 0;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	bottom: 0;
 	right: 0;
 	left: 0;
 	padding: 0;
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
 	background-color: rgba(0, 0, 0, 0.5);
 	display: ${props => (props.$isOpen ? "flex" : "none")};
