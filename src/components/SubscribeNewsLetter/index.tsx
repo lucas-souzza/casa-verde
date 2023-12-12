@@ -7,10 +7,38 @@ import {
 	SectionImagemContainer,
 	SectionStyled,
 } from "./styled";
+import { useState } from "react";
+import ConfirmSubscribeModal from "../ConfirmSubscribeModal";
+import ButtonDefault from "../ButtonDefault";
 
 function SubscribeNewsLetter() {
+	const [email, setEmail] = useState("");
+	const [modalOpen, setModalOpen] = useState(false);
+
+	function handleEmail(event: React.FormEvent<HTMLFormElement>) {
+		event.preventDefault();
+
+		if (validarEmail()) {
+			setModalOpen(true);
+		}
+	}
+
+	function validarEmail() {
+		var re = /\S+@\S+\.\S+/;
+		return re.test(email);
+	}
+
+	function handleModal() {
+		setModalOpen(false);
+	}
+
 	return (
 		<SectionStyled>
+			<ConfirmSubscribeModal
+				isOpen={modalOpen}
+				email={email}
+				changeModalState={handleModal}
+			/>
 			<SectionContentContainer>
 				<DefaultParagraph size="1.25rem">
 					Sua casa com as
@@ -27,9 +55,19 @@ function SubscribeNewsLetter() {
 					das novidades da marca.
 				</DefaultParagraph>
 
-				<FormNewsletter>
-					<input type="email" placeholder="Insira seu e-mail" />
-					<button type="submit">Assinar newsletter</button>
+				<FormNewsletter onSubmit={handleEmail}>
+					<input
+						type="email"
+						placeholder="Insira seu e-mail"
+						onChange={event => setEmail(event.target.value)}
+						value={email}
+					/>
+					<ButtonDefault
+						type="submit"
+						bgColor={validarEmail() ? "#ffcb47" : "#202020"}
+					>
+						Assinar newsletter
+					</ButtonDefault>
 				</FormNewsletter>
 			</SectionContentContainer>
 

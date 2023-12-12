@@ -43,20 +43,4 @@ export const FormNewsletter = styled.form`
 		background-repeat: no-repeat;
 		background-position: left;
 	}
-
-	& > button {
-		border: none;
-		background-color: var(--color-yellow);
-		color: var(--color-white);
-		padding: 1.5rem;
-		font-size: 1rem;
-		font-family: var(--font-default);
-		cursor: pointer;
-		z-index: 1;
-		transition: transform 150ms ease;
-	}
-
-	& > button:hover {
-		transform: scale(1.03);
-	}
 `;
