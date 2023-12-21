@@ -30,6 +30,7 @@ function SubscribeNewsLetter() {
 
 	function handleModal() {
 		setModalOpen(false);
+		setEmail("");
 	}
 
 	return (
