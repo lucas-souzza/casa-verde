@@ -6,7 +6,9 @@ function PageContainer({ children }: PageContainerProps) {
 	return (
 		<Background>
 			<BackgroundImageYellow src={imageYellow} />
-			<Container>{children}</Container>
+			<Container>
+				{children}
+			</Container>
 		</Background>
 	);
 }

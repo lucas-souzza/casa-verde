@@ -2,6 +2,7 @@ import PageContainer from "../../components/PageContainer";
 import Menu from "../../components/Menu";
 import SubscribeNewsLetter from "../../components/SubscribeNewsLetter";
 import Banner from "../../components/Banner";
+import Offers from "../../components/Offers";
 
 function Home() {
 	return (
@@ -11,6 +12,7 @@ function Home() {
 					<Menu />
 					<SubscribeNewsLetter />
 					<Banner />
+					<Offers />
 				</main>
 			</PageContainer>
 		</>

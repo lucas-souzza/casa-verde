@@ -1,5 +1,7 @@
+import { RecoilRoot } from "recoil";
 import Home from "./pages/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Suspense } from "react";
 
 const router = createBrowserRouter([
 	{
@@ -11,7 +13,11 @@ const router = createBrowserRouter([
 function AppRoutes() {
 	return (
 		<>
-			<RouterProvider router={router} />
+			<RecoilRoot>
+				<Suspense fallback="Carregando...">
+					<RouterProvider router={router} />
+				</Suspense>
+			</RecoilRoot>
 		</>
 	);
 }
