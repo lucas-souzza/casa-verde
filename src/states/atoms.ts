@@ -7,3 +7,15 @@ export const productsList = atom<ProductType[]>({
     default: fetchProductsList
 });
 
+export const orderingValue = atom({
+    key: "orderingValue",
+    default: ""
+});
+
+export const filterValue = atom({
+    key: "filterValue",
+    default: {
+        minPrice: 0,
+        maxPrice: 0
+    }
+})
